@@ -4,7 +4,7 @@ fi
 
 
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
 
 
 zstyle ':omz:update' mode auto      # update automatically without asking
@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='nano'
 # fi
 
-source ~/.oh-my-zsh/custom/themes/powerlevel10k
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 alias ll="lsd -al"
 alias ls="lsd -l"

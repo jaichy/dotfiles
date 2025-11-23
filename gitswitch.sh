@@ -3,8 +3,8 @@
 personal_gihub_username="501urchin"
 personal_gihub_email="jaychhitu@gmail.com"
  
-school_gihub_email="jaychhitu@gmail.com"
-school_gihub_email="gopher93185789"
+school_gihub_email="102717@glr.nl"
+school_gihub_username="gopher93185789"
 
 if [ -z "$1" ]; then
     echo "No argument provided"
@@ -19,7 +19,7 @@ fi
 
 if [ "$1" = "school" ]; then
     echo "switched to school github"
-    git config user.name $school_gihub_email
+    git config user.name $user
     git config user.email $school_gihub_email
 fi
 
