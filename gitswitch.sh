@@ -19,7 +19,7 @@ fi
 
 if [ "$1" = "school" ]; then
     echo "switched to school github"
-    git config user.name $user
+    git config user.name $school_gihub_username
     git config user.email $school_gihub_email
 fi
 
