@@ -1,0 +1,16 @@
+# .editorconfig for Go-style C# brace placement
+
+root = true
+
+[*.cs]
+# Use K&R brace style (open braces on the same line)
+csharp_new_line_before_open_brace = none
+
+# Optional: also control newlines for specific constructs
+csharp_new_line_before_open_brace_types = none
+csharp_new_line_before_open_brace_methods = none
+csharp_new_line_before_open_brace_accessors = none
+csharp_new_line_before_open_brace_anonymous_methods = none
+csharp_new_line_before_open_brace_control_blocks = none
+csharp_new_line_before_open_brace_lambdas = none
+
