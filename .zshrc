@@ -4,7 +4,7 @@ fi
 
 
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 zstyle ':omz:update' mode auto      # update automatically without asking
@@ -23,9 +23,9 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='nano'
 # else
 #   export EDITOR='nano'
-fi
+# fi
 
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.oh-my-zsh/custom/themes/powerlevel10k
 
 alias ll="lsd -al"
 alias ls="lsd -l"
@@ -33,9 +33,10 @@ alias ff=fastfetch
 alias gor="go run ."
 alias got="go mod tidy"
 alias gof="go fmt ./..."
-alias npi="pnpm install --force"
-alias npr="pnpm run dev"
 alias gop="code ~/go-playground"
+
+alias jpi="bun install --force"
+alias jpr="bun run dev"
 
 export PATH=$PATH:$(go env GOPATH)/bin
 
