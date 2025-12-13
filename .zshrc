@@ -33,10 +33,14 @@ alias ff=fastfetch
 alias gor="go run ."
 alias got="go mod tidy"
 alias gof="go fmt ./..."
-alias gop="code ~/go-playground"
+alias gop="code ~/codebases/go-playground"
 
+alias prog="cd ~/codebases"
+alias school="cd ~/codebases/school"
 alias jpi="bun install --force"
 alias jpr="bun run dev"
+
+alias dotfiles="code ~/dotfiles"
 
 export PATH=$PATH:$(go env GOPATH)/bin
 
