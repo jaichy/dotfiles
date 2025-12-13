@@ -30,6 +30,7 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 alias ll="lsd -al"
 alias ls="lsd -l"
 alias ff=fastfetch
+
 alias gor="go run ."
 alias got="go mod tidy"
 alias gof="go fmt ./..."
