@@ -1,0 +1,158 @@
+{
+    // ============================================================
+    // Files & Explorer
+    // ============================================================
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "symbols.hidesExplorerArrows": false,
+    "helium-icon-theme.hidesExplorerArrows": true,
+    // ============================================================
+    // Security
+    // ============================================================
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.promptForLocalFileProtocolHandling": false,
+    // ============================================================
+    // Editor – Formatting & Behavior
+    // ============================================================
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.largeFileOptimizations": false,
+    "editor.minimap.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.stickyScroll.enabled": false,
+    // ============================================================
+    // Editor – Fonts & Accessibility
+    // ============================================================
+    "editor.fontFamily": "jetBrains Mono",
+    "editor.fontSize": 12,
+    "editor.fontLigatures": false,
+    "editor.allowVariableFontsInAccessibilityMode": true,
+    "accessibility.underlineLinks": true,
+    // ============================================================
+    // Editor – Unicode Highlighting
+    // ============================================================
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    // ============================================================
+    // Language-Specific Editor Settings
+    // ============================================================
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "[templ]": {
+        "editor.defaultFormatter": "a-h.templ"
+    },
+    "[cpp]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false,
+        "editor.defaultFormatter": null
+    },
+    // ============================================================
+    // Git
+    // ============================================================
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
+    // ============================================================
+    // Go / C++ / Build Tools
+    // ============================================================
+    "go.toolsManagement.autoUpdate": true,
+    "go.languageServerFlags": [],
+    "cmake.configureOnOpen": true,
+    "makefile.configureOnOpen": true,
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    // ============================================================
+    // JavaScript / TypeScript
+    // ============================================================
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    // ============================================================
+    // Terminal
+    // ============================================================
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.profiles.windows": {
+        "Ubuntu": {
+            "path": "C:\\Windows\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu",
+                "--cd",
+                "~"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Ubuntu",
+    // ============================================================
+    // Workbench & UI
+    // ============================================================
+    "workbench.startupEditor": "readme",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editorLargeFileConfirmation": 8192,
+    "workbench.sideBar.location": "right",
+    "workbench.layoutControl.enabled": false,
+    "workbench.settings.applyToAllProfiles": [],
+    "workbench.iconTheme": "symbols",
+    "workbench.colorTheme": "B'nT",
+    "workbench.statusBar.visible": false,
+    "workbench.reduceMotion": "off",
+    "workbench.fontAliasing": "antialiased",
+    "workbench.view.showQuietly": {
+        "workbench.panel.output": false
+    },
+    // ============================================================
+    // Window
+    // ============================================================
+    "window.commandCenter": false,
+    "chat.commandCenter.enabled": false,
+    "window.customTitleBarVisibility": "windowed",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 1,
+    "window.zoomPerWindow": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    // ============================================================
+    // Diff / Live Server
+    // ============================================================
+    "diffEditor.ignoreTrimWhitespace": false,
+    "liveServer.settings.donotVerifyTags": true,
+    // ============================================================
+    // Chat
+    // ============================================================
+    "chat.editing.confirmEditRequestRemoval": false,
+    // ============================================================
+    // Spell Checker (cSpell)
+    // ============================================================
+    "cSpell.autocorrect": true,
+    "cSpell.allowCompoundWords": true,
+    "cSpell.unknownWords": "report-common-typos",
+    "cSpell.fixSpellingWithRenameProvider": true,
+    "cSpell.enabled": false,
+    
+    // ============================================================
+    // Extensions / Misc
+    // ============================================================
+    "tailwindCSS.experimental.classRegex": [],
+    "docker.extension.dockerEngineAvailabilityPrompt": false,
+    "workbench.editorAssociations": {
+        "*.bin": "default"
+    }
+    // ============================================================
+    // Custom
+    // ============================================================
+}
