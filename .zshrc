@@ -3,6 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
+export PATH="/Users/jayac/.bun/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 
@@ -40,8 +41,11 @@ alias prog="cd ~/codebases"
 alias school="cd ~/codebases/school"
 alias jpi="bun install --force"
 alias jpr="bun run dev"
-
+alias ghelp="cat ~/git_help.txt"
 alias dotfiles="code ~/dotfiles"
+alias dop="doppler run"
+alias dopp="doppler run --config prod"
+alias cat="bat --style=plain --paging=never"
 
 export PATH=$PATH:$(go env GOPATH)/bin
 
@@ -53,3 +57,22 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # Created by `pipx` on 2025-09-26 18:33:38
 export PATH="$PATH:/Users/jayac/.local/bin"
+
+export TERM="xterm-256color"
+
+[[ -s "/Users/jayac/.gvm/scripts/gvm" ]] && source "/Users/jayac/.gvm/scripts/gvm"
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
+[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
+
+autoload -Uz compinit
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+compinit
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
