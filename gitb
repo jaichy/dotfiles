@@ -1,0 +1,57 @@
+#!/bin/bash
+
+arg1="$1"
+arg2="$2"
+
+# Usage function
+usage() {
+    echo "Usage:"
+    echo "  $0 <branch-name>          # create and push a new branch"
+    echo "  $0 <branch-name> --purge  # delete local and remote branch"
+    exit 1
+}
+
+# Exit if no first argument
+if [ -z "$arg1" ]; then
+    usage
+fi
+
+# Purge branch
+if [[ "$arg2" == "--purge" ]]; then
+    # Check if branch exists locally
+    if git show-ref --verify --quiet "refs/heads/$arg1"; then
+        echo "Local branch '$arg1' exists."
+    else
+        echo "Local branch '$arg1' does not exist."
+    fi
+
+    # Check if branch exists remotely
+    if git ls-remote --exit-code --heads origin "$arg1" >/dev/null; then
+        echo "Remote branch '$arg1' exists."
+    else
+        echo "Remote branch '$arg1' does not exist."
+    fi
+
+    # Confirm deletion
+    read -p "Are you sure you want to delete branch '$arg1'? (y/N) " confirm
+    if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+        echo "Aborting."
+        exit 0
+    fi
+
+    # Switch to main and delete branch
+    git checkout main
+    git branch -D "$arg1" 2>/dev/null || echo "Local branch '$arg1' not found."
+    git push origin --delete "$arg1" 2>/dev/null || echo "Remote branch '$arg1' not found."
+    exit 0
+fi
+
+# Create new branch safely
+if git show-ref --verify --quiet "refs/heads/$arg1"; then
+    echo "Branch '$arg1' already exists locally. Checking it out."
+    git checkout "$arg1"
+else
+    echo "Creating and pushing new branch '$arg1'."
+    git checkout -b "$arg1"
+    git push -u origin "$arg1"
+fi
