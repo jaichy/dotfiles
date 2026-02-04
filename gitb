@@ -6,8 +6,8 @@ arg2="$2"
 # Usage function
 usage() {
     echo "Usage:"
-    echo "  $0 <branch-name>          # create and push a new branch"
-    echo "  $0 <branch-name> --purge  # delete local and remote branch"
+    echo "  gitb <branch-name>          # create and push a new branch"
+    echo "  gitb <branch-name> --purge  # delete local and remote branch"
     exit 1
 }
 
