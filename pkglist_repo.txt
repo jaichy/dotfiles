@@ -15,6 +15,7 @@ dunst
 efibootmgr
 fastfetch
 fd
+fuzzel
 fzf
 git
 grim
@@ -29,6 +30,7 @@ libva-nvidia-driver
 linux
 linux-firmware
 lsd
+man-db
 mkinitcpio
 nano
 neovim
@@ -46,7 +48,6 @@ polkit-kde-agent
 qt5-wayland
 qt6-wayland
 qt6ct
-rofi
 sddm
 slurp
 smartmontools
