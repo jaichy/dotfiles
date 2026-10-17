@@ -1,22 +1,21 @@
 #!/usr/bin/env bash
 
-link() {
-  local target="$1" name="$2"
-  if [ -L "$name" ]; then
-    echo "skip: $name is already a symlink"
-  elif [ -e "$name" ]; then
-    echo "skip: $name exists and is not a symlink"
-  else
-    ln -s "$target" "$name"
-    echo "linked: $name -> $target"
+copy() {
+  local src="$1" dst="$2"
+  if [ ! -e "$src" ]; then
+    echo "skip: $src does not exist"
+    return
   fi
+  rm -rf -- "$dst"
+  cp -a "$src" "$dst"
+  echo "copied: $src -> $dst"
 }
 
-link ~/.config/hypr      ~/dotfiles/hypr
-link ~/.config/alacritty ~/dotfiles/alacritty
-link ~/.zshrc            ~/dotfiles/.zshrc
-link ~/.zprofile         ~/dotfiles/.zprofile
-link ~/.config/fuzzel         ~/dotfiles/fuzzel
+copy ~/.config/hypr      ~/dotfiles/hypr
+copy ~/.config/alacritty ~/dotfiles/alacritty
+copy ~/.zshrc            ~/dotfiles/.zshrc
+copy ~/.zprofile         ~/dotfiles/.zprofile
+copy ~/.config/fuzzel    ~/dotfiles/fuzzel
 
 pacman -Qqen > ~/dotfiles/pkglist_repo.txt
 pacman -Qqem > ~/dotfiles/pkglist_aur.txt
