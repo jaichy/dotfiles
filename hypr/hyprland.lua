@@ -24,6 +24,7 @@ local music = "spotify"
 hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 0")
+    hl.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 50")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"adw-gtk3-dark\"")
     
@@ -128,10 +129,23 @@ hl.bind(
 )
 
 hl.bind(
-   "ALT + o",
-    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")
+  "ALT + o",
+  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+  { repeating = true }
 )
+
 hl.bind(
-   "ALT + p",
-    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")
+  "ALT + p",
+  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"),
+  { repeating = true }
+)
+
+hl.bind(
+  "ALT + i",
+  hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")
+)
+
+hl.bind(
+  "ALT + u",
+  hl.dsp.exec_cmd("playerctl play-pause")
 )
