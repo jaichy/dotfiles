@@ -5,7 +5,6 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 source "$HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme"
-source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="robbyrussell"
 
@@ -19,10 +18,8 @@ i() {
     sudo pacman -Sy "$1" || yay -Sy "$1"
 }
 
-alias ls='lsd'
-alias ll='lsd -al'
-alias la='lsd -a'
-alias lt='lsd --tree'
+source $ZSH/oh-my-zsh.sh
+
 
 alias ff=fastfetch
 
@@ -52,5 +49,11 @@ alias u="sudo pacman -Syu && yay -Syu"
 
 export PATH=$PATH:$(go env GOPATH)/bin
 
+
+
+alias ls='lsd'
+alias ll='lsd -al'
+alias la='lsd -a'
+alias lt='lsd --tree'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

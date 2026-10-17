@@ -40,6 +40,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 nvidia-open
+obsidian
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -48,6 +49,7 @@ polkit-kde-agent
 qt5-wayland
 qt6-wayland
 qt6ct
+quickshell
 sddm
 slurp
 smartmontools

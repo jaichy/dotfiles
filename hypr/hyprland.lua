@@ -126,3 +126,12 @@ hl.bind(
     hl.dsp.window.resize(),
     { mouse = true }
 )
+
+hl.bind(
+   "ALT + o",
+    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")
+)
+hl.bind(
+   "ALT + p",
+    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")
+)

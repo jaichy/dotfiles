@@ -11,7 +11,7 @@ hl.window_rule({
     match = {
         class = "^(com.microsoft.VSCode)$",
     },
-    opacity = 0.9,
+    opacity = 1,
     workspace = "3 silent",
 })
 
