@@ -55,7 +55,9 @@ snapper
 steam
 sudo
 ttf-dejavu
+ttf-jetbrains-mono-nerd
 ttf-liberation
+ttf-nerd-fonts-symbols
 ufw
 unzip
 uwsm
