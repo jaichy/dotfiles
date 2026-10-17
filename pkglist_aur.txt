@@ -1,0 +1,7 @@
+hyprqt6engine
+jdownloader2
+spotify
+visual-studio-code-bin
+yay
+yay-debug
+zen-browser-bin
