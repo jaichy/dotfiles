@@ -17,5 +17,5 @@ link ~/.config/alacritty ~/dotfiles/alacritty
 link ~/.zshrc            ~/dotfiles/.zshrc
 link ~/.zprofile         ~/dotfiles/.zprofile
 
-pacman -Qqen > pkglist_repo.txt
-pacman -Qqem > pkglist_aur.txt
+pacman -Qqen > ~/dotfiles/pkglist_repo.txt
+pacman -Qqem > ~/dotfiles/pkglist_aur.txt
