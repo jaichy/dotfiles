@@ -5,6 +5,7 @@ base-devel
 bat
 bluez
 bluez-utils
+brightnessctl
 btop
 btrfs-progs
 cmatrix
@@ -21,7 +22,9 @@ git
 grim
 gst-plugin-pipewire
 htop
+hypridle
 hyprland
+hyprlock
 hyprpaper
 hyprshutdown
 kitty
@@ -57,6 +60,7 @@ smartmontools
 snapper
 steam
 sudo
+tmux
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 ttf-liberation

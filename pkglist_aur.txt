@@ -2,7 +2,6 @@ hyprqt6engine
 jdownloader2
 spotify
 visual-studio-code-bin
-webcord
 yay
 yay-debug
 zen-browser-bin

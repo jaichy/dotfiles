@@ -47,6 +47,18 @@ alias gs="git switch -"
 alias h="cd ~"
 alias u="sudo pacman -Syu && yay -Syu"
 
+dotsync() {
+  local prevwd=$PWD
+  cd ~/dotfiles || return 1
+
+  ~/dotfiles/scripts/setup_tracking.sh &&
+  git add . &&
+  git commit -m "update" &&
+  git push
+
+  cd "$prevwd"
+}
+
 export PATH=$PATH:$(go env GOPATH)/bin
 
 
