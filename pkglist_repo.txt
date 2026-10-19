@@ -10,6 +10,7 @@ btop
 btrfs-progs
 cmatrix
 cowsay
+delve
 discord
 dolphin
 dunst
@@ -69,12 +70,14 @@ ufw
 unzip
 uwsm
 vim
+vulkan-tools
 wget
 wireplumber
 wofi
 wpa_supplicant
 xdg-desktop-portal-hyprland
 xdg-utils
+zig
 zoxide
 zram-generator
 zsh

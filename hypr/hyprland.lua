@@ -25,7 +25,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 0")
-    hl.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 50")
+    hl.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 80%")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"adw-gtk3-dark\"")
     

@@ -15,7 +15,7 @@ plugins=(
 )
 
 i() {
-    sudo pacman -Sy "$1" || yay -Sy "$1"
+    sudo pacman -S "$1" || yay -S "$1"
 }
 
 source $ZSH/oh-my-zsh.sh
@@ -59,6 +59,10 @@ dotsync() {
   cd "$prevwd"
 }
 
+v() {
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ "$1"%
+}
+
 export PATH=$PATH:$(go env GOPATH)/bin
 
 
@@ -69,3 +73,12 @@ alias la='lsd -a'
 alias lt='lsd --tree'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# bun completions
+[ -s "/home/jayac/.bun/_bun" ] && source "/home/jayac/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+[[ -s "/home/jayac/.gvm/scripts/gvm" ]] && source "/home/jayac/.gvm/scripts/gvm"
